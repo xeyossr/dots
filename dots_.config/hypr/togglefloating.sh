@@ -1,1 +1,0 @@
-hyprctl dispatch togglefloating

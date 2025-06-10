@@ -1,0 +1,68 @@
+{
+  "layer": "top",
+  "output": ["*"],
+  "position": "top",
+  "margin-left": 5,
+  "margin-right": 5,
+  "margin-top": 5,
+  "height": 27,
+  "mod": "dock",
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "reload_style_on_change": true,
+  "include": [
+    "$XDG_CONFIG_HOME/waybar/modules/*json*", 
+    "$XDG_DATA_HOME/waybar/modules/*json*"
+  ],
+  "modules-left": ["group/leaf-inverse"],
+  "modules-center": ["group/pill#1", "group/pill-in#center", "group/pill#2"],
+  "modules-right": ["group/leaf"],
+
+  "group/pill#2": {
+    "orientation": "inherit",
+    "modules": [""]
+  },
+
+  "group/pill#1": {
+    "orientation": "inherit",
+    "modules": [""]
+  },
+
+  "group/leaf-inverse": {
+    "orientation": "inherit",
+    "modules": ["custom/space_2","hyprland/workspaces"]
+  },
+
+  "group/pill-in#center": {
+    "orientation": "inherit",
+    "modules": [
+      "idle_inhibitor",
+      "clock"
+    ]
+  },
+
+  "group/leaf": {
+    "orientation": "inherit",
+    "modules": [
+      "network",
+	  "pulseaudio",
+      "custom/updates",
+      "hyprland/language",
+      "custom/space_1",
+      "custom/prayer",
+      "custom/space_1",
+      "custom/weather",
+      "tray",
+      "custom/swaync",
+      "custom/dunst",
+      "custom/power",
+      "custom/space_2"
+    ]
+  },
+
+  "group/pill-in#clipboard": {
+    "orientation": "inherit",
+    "modules": ["custom/clipboard"]
+  }
+}

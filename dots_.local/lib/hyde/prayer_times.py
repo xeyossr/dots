@@ -36,37 +36,51 @@ def str_to_time(date_str, hour_minute, timezone):
 
 def find_next_prayer(filtered_today, timezone):
     now = datetime.now(timezone)
-    times = {
+    times_today = {
         k: str_to_time(now.strftime("%Y-%m-%d"), v, timezone)
         for k, v in filtered_today.items()
     }
 
-    next_prayer, next_time = None, None
-    for name, t in times.items():
-        if t > now and (next_time is None or t < next_time):
+    next_prayer = None
+    next_time = None
+
+    for name in ["Fajr", "Sunrise", "Dhuhr", "Asr", "Maghrib", "Isha"]:
+        t = times_today.get(name)
+        if t and t > now:
             next_prayer = name
             next_time = t
+            break
 
     if next_prayer is None:
-        fajr_time = times.get("Fajr")
-        if fajr_time is None:
-            return "No data"
-        mins = (
-            fajr_time.minute
-            + fajr_time.hour * 60
-            + 24 * 60
-            - (now.minute + now.hour * 60)
+        tomorrow = now + timedelta(days=1)
+        response = fetch_timings(
+            os.getenv("CITY", "Istanbul"),
+            os.getenv("COUNTRY_CODE", "TR"),
+            int(os.getenv("PRAYER_CALC_METHOD_ID", "13")),
         )
-        return f"Fajr in {round(mins)}m"
-    else:
-        diff = (next_time - now).total_seconds()
-        hours = int(diff // 3600)
-        mins = int((diff % 3600) // 60)
-        if hours == 0:
-            return f"{next_prayer} in {mins}m"
+        tomorrow_filtered = {
+            k: v for k, v in response["data"]["timings"].items() if k == "Fajr"
+        }
+        fajr_str = tomorrow_filtered.get("Fajr")
+        if fajr_str:
+            fajr_time = str_to_time(tomorrow.strftime("%Y-%m-%d"), fajr_str, timezone)
+            diff = (fajr_time - now).total_seconds()
+            hours = int(diff // 3600)
+            mins = int((diff % 3600) // 60)
+            if hours == 0:
+                return f"Fajr in {mins}m"
+            else:
+                return f"Fajr in {hours}h {mins}m"
         else:
-            return f"{next_prayer} in {hours}h {mins}m"
+            return "No data"
 
+    diff = (next_time - now).total_seconds()
+    hours = int(diff // 3600)
+    mins = int((diff % 3600) // 60)
+    if hours == 0:
+        return f"{next_prayer} in {mins}m"
+    else:
+        return f"{next_prayer} in {hours}h {mins}m"
 
 def format_tooltip(forecast, method_display_name, city, country_code, next_text):
     emoji_names = {

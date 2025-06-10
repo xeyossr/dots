@@ -1,7 +1,0 @@
-"custom/menu": {
-	"tooltip": false,
-	"format": "Apps",
-	"rotate": ${r_deg},
-	"on-click": "bash -c 'if pgrep -x rofi > /dev/null; then killall rofi; else ~/.local/share/bin/rofilaunch.sh d; fi'"
-},
-

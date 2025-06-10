@@ -29,18 +29,8 @@
         }
     },
     "windowsState": {
-        "lastActiveWindow": {
-            "folder": "file:///home/kamisaki/.config/kitty",
-            "uiState": {
-                "mode": 0,
-                "x": 0,
-                "y": 0,
-                "width": 1366,
-                "height": 768
-            }
-        },
         "lastPluginDevelopmentHostWindow": {
-            "folder": "file:///home/kamisaki/.config/kitty",
+            "folder": "file:///home/kamisaki/.config/hypr",
             "uiState": {
                 "mode": 0,
                 "x": 0,

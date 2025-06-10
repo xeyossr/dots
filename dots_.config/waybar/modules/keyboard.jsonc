@@ -1,8 +1,0 @@
-"keyboard": {
-    "format": "{layout}",
-    "layout": [
-        { "en": "English" },
-        { "tr": "Türkçe" },
-        { "az": "Azerbaycanca" }
-    ]
-}
