@@ -1,0 +1,6 @@
+$HOME/.config/swayosd/theme.css|$HOME/.local/share/hyde/wallbash/scripts/swayosd.sh
+@define-color main-bg #11111b;
+@define-color main-fg #cdd6f4;
+
+@define-color act-bg #a6adc8;
+@define-color act-fg #313244;

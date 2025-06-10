@@ -175,7 +175,6 @@ def format_chances(hour):
 ### Variables ###
 # Load environment variables from the specified files
 load_env_file(os.path.expanduser("~/.local/state/.staterc"))
-load_env_file(os.path.expanduser("~/.local/state/hyde/staterc"))
 load_env_file(os.path.expanduser("~/.local/state/hyde/config"))
 
 temp_unit = os.getenv(

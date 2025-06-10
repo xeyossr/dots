@@ -49,10 +49,13 @@
 	  "pulseaudio",
       "custom/updates",
       "hyprland/language",
+      "custom/space_1",
       "custom/prayer",
       "custom/weather",
       "tray",
+      "custom/space_1",
       "custom/swaync",
+      "custom/space_1",
       "custom/power",
       "custom/space_2"
     ]

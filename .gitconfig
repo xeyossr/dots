@@ -1,0 +1,14 @@
+[user]
+	email = 113219171+xeyossr@users.noreply.github.com
+	name = xeyossr
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[init]
+	defaultBranch = main
+[http]
+	postBuffer = 524288000
+[alias]
+    pushboth = "!f() { git push $1 main && git push $2 main; }; f"

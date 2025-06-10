@@ -1,7 +1,6 @@
-HYDE_THEME="Catppuccin Mocha"
 rofiStyle="launchpad"
-HYPR_ANIMATION="high-edited"
 enableWallDcol="0"
+HYDE_THEME="Catppuccin Mocha"
 WAYBAR_LAYOUT_PATH=/home/kamisaki/.config/waybar/layouts/waybar-1.jsonc
 WAYBAR_LAYOUT_NAME=waybar-1
 WAYBAR_STYLE_PATH=/home/kamisaki/.config/waybar/styles/waybar-1.css

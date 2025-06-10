@@ -41,46 +41,63 @@ def find_next_prayer(filtered_today, timezone):
         for k, v in filtered_today.items()
     }
 
-    next_prayer = None
-    next_time = None
+    prayer_order = ["Fajr", "Sunrise", "Dhuhr", "Asr", "Maghrib", "Isha"]
 
-    for name in ["Fajr", "Sunrise", "Dhuhr", "Asr", "Maghrib", "Isha"]:
+    for idx, name in enumerate(prayer_order):
         t = times_today.get(name)
         if t and t > now:
-            next_prayer = name
-            next_time = t
-            break
+            diff = (t - now).total_seconds()
 
-    if next_prayer is None:
-        tomorrow = now + timedelta(days=1)
-        response = fetch_timings(
-            os.getenv("CITY", "Istanbul"),
-            os.getenv("COUNTRY_CODE", "TR"),
-            int(os.getenv("PRAYER_CALC_METHOD_ID", "13")),
-        )
-        tomorrow_filtered = {
-            k: v for k, v in response["data"]["timings"].items() if k == "Fajr"
-        }
-        fajr_str = tomorrow_filtered.get("Fajr")
-        if fajr_str:
-            fajr_time = str_to_time(tomorrow.strftime("%Y-%m-%d"), fajr_str, timezone)
-            diff = (fajr_time - now).total_seconds()
+            # 1 dakikadan az kaldıysa sıradaki namaza geç
+            if diff < 60:
+                if idx + 1 < len(prayer_order):
+                    next_name = prayer_order[idx + 1]
+                    next_time = times_today.get(next_name)
+                    if next_time and next_time > now:
+                        diff = (next_time - now).total_seconds()
+                        hours = int(diff // 3600)
+                        mins = int((diff % 3600) // 60)
+                        if hours == 0:
+                            return f"{next_name} in {mins}m"
+                        elif mins == 0:
+                            return f"{next_name} in {hours}h"
+                        else:
+                            return f"{next_name} in {hours}h {mins}m"
+                    else:
+                        break
+                else:
+                    break
+
             hours = int(diff // 3600)
             mins = int((diff % 3600) // 60)
             if hours == 0:
-                return f"Fajr in {mins}m"
+                return f"{name} in {mins}m"
+            elif mins == 0:
+                return f"{name} in {hours}h"
             else:
-                return f"Fajr in {hours}h {mins}m"
-        else:
-            return "No data"
+                return f"{name} in {hours}h {mins}m"
 
-    diff = (next_time - now).total_seconds()
-    hours = int(diff // 3600)
-    mins = int((diff % 3600) // 60)
-    if hours == 0:
-        return f"{next_prayer} in {mins}m"
+    # Bugünün tüm vakitleri geçtiyse: yarının Fajr'ını getir
+    tomorrow = now + timedelta(days=1)
+    response = fetch_timings(
+        os.getenv("CITY", "Istanbul"),
+        os.getenv("COUNTRY_CODE", "TR"),
+        int(os.getenv("PRAYER_CALC_METHOD_ID", "13")),
+    )
+    fajr_str = response["data"]["timings"].get("Fajr")
+    if fajr_str:
+        fajr_time = str_to_time(tomorrow.strftime("%Y-%m-%d"), fajr_str, timezone)
+        diff = (fajr_time - now).total_seconds()
+        hours = int(diff // 3600)
+        mins = int((diff % 3600) // 60)
+        if hours == 0:
+            return f"Fajr in {mins}m"
+        elif mins == 0:
+            return f"Fajr in {hours}h"
+        else:
+            return f"Fajr in {hours}h {mins}m"
     else:
-        return f"{next_prayer} in {hours}h {mins}m"
+        return "No data"
 
 def format_tooltip(forecast, method_display_name, city, country_code, next_text):
     emoji_names = {
@@ -117,7 +134,6 @@ def format_tooltip(forecast, method_display_name, city, country_code, next_text)
 
 def main():
     load_env_file(os.path.expanduser("~/.local/state/.staterc"))
-    load_env_file(os.path.expanduser("~/.local/state/hyde/staterc"))
     load_env_file(os.path.expanduser("~/.local/state/hyde/config"))
 
     city = os.getenv("CITY", "Istanbul")

@@ -108,6 +108,7 @@ handle_recording() {
         grim -g "$GEOM" "$tmp_thumbnail"
     fi
 
+	notify-send -a "HyDE" "Recording started"
     "${RECORDER}" "${parameters[@]}" -f "${save_file_path}"
     notify-send -a "HyDE Alert" "${RECORDER}: Recording saved at ${save_file_path}" -i "${tmp_thumbnail}"
 }
