@@ -7,7 +7,7 @@
 | WM              | `hyprland`                                           |
 | Bar             | `waybar`                                             |
 | Launcher        | `rofi`                                               |
-| Notifications   | `dunst`                                              |
+| Notifications   | `dunst/swaync`                                       |
 | Terminal        | `kitty`                                              |
 | Shell           | `fish`                                               |
 
@@ -21,7 +21,7 @@ You can also use `dots_pkgs/install.sh` to install all dependencies.
 | Super + E              | Launch file manager (`dolphin`)             |
 | Super + W              | Launch web browser (`brave`)                |
 | Super + Shift + Q      | Close focused application                   |
-| Super + Space          | Start program launcher (`rofi`)             |
+| Super + A / Space      | Start program launcher (`rofi`)             |
 | Super + 1-9            | Switch workspaces from 1 to 9               |
 
 ## Screenshots
