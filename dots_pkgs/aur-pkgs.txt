@@ -35,6 +35,7 @@ python-altgraph
 python-customtkinter
 python-decouple
 python-devgoldyutils
+python-hyprpy
 python-inquirer
 python-kitchen
 python-kitty
@@ -53,5 +54,4 @@ toipe
 tty-clock
 v4l-utils-git
 vencord-installer-cli-bin
-wlroots
 xwaylandvideobridge

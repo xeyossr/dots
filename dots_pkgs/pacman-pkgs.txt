@@ -70,6 +70,7 @@ dosfstools
 downgrade
 dracut
 duf
+dunst
 e2fsprogs
 edk2-ovmf
 efibootmgr
@@ -83,6 +84,7 @@ fastfetch
 ffmpegthumbnailer
 ffmpegthumbs
 figlet
+firefox
 fish
 fisher
 font-manager
@@ -281,6 +283,7 @@ python-btrfs
 python-customtkinter
 python-defusedxml
 python-evdev
+python-hyprpy
 python-kitchen
 python-kitty
 python-loguru
@@ -317,7 +320,9 @@ rofi-calc
 rofi-wayland
 rsync
 rtkit
+rust
 s-nail
+satty
 sddm-kcm
 sg3_utils
 sl
@@ -335,7 +340,7 @@ sudo
 swappy
 swaylock-effects-git
 swaync
-swayosd-git
+swayosd
 swww
 sysfsutils
 systemd-sysvcompat
@@ -382,7 +387,7 @@ vim
 visual-studio-code-bin
 w3m
 waifu2x-ncnn-vulkan
-waybar
+waybar-git
 webkit2gtk
 weston
 wf-recorder
@@ -390,7 +395,7 @@ wget
 which
 wireplumber
 wlogout
-wlroots
+wlroots0.18
 wmctrl
 wofi
 wpa_supplicant

@@ -1,4 +1,2 @@
 .vscode
-dotfiles.sh
-dots_pkgs/pkgls.sh
 dots_.local/state/.staterc

@@ -2,7 +2,7 @@
 
 
 #// source variables
-
+cacheDir="${cacheDir:-$XDG_CACHE_HOME/hyde}"
 discord_col="${cacheDir}/wallbash/discord.css"
 declare -a client_list=()
 
@@ -25,4 +25,3 @@ for client_css in "${client_list[@]}" ; do
         cp "${discord_col}" "${client_css}"
     fi
 done
-

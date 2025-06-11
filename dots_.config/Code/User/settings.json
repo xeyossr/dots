@@ -41,5 +41,10 @@
   "clangd.detectExtensionConflicts": false,
   "workbench.colorTheme": "wallbash",
   "security.workspace.trust.untrustedFiles": "open",
-  "explorer.confirmPasteNative": false
+  "explorer.confirmPasteNative": false,
+
+  "git.enabled": false,
+  "git.autorefresh": false,
+  "git.autofetch": false,
+  "git.confirmSync": false
 }
