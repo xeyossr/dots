@@ -44,7 +44,6 @@ To install all dotfiles, run `./dotfiles.sh --install`.
 
 ## Screenshots
 
-![hyprland](pr/1.png)
 ![hyprland](pr/2.png)
 
 ---
