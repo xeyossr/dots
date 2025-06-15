@@ -1,0 +1,4 @@
+requests
+InquirerPy
+dotenv
+packaging

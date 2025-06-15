@@ -1,0 +1,1 @@
+from modules.fetch import animecix, openanime

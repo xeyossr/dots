@@ -1,0 +1,52 @@
+sw_volume: 88
+audio_device_state:1:My HTTP Stream
+audio_device_state:1:My Pulse Output
+audio_device_state:1:toggle_visualizer
+state: stop
+current: 4
+random: 0
+repeat: 0
+single: 1
+consume: 0
+crossfade: 0
+mixrampdb: 0
+mixrampdelay: -1
+lastloadedplaylist: Youtube Music
+playlist_begin
+0:playlists/youtube-music/archangel (Slowed).mp3
+1:playlists/youtube-music/BE MY VALENTINE!.mp3
+2:playlists/youtube-music/Beat das Trevas [Slowed + Reverb].mp3
+3:playlists/youtube-music/Bloody Mary.mp3
+4:playlists/youtube-music/Criminal (But Mama I'm in Love With a Criminal).mp3
+5:playlists/youtube-music/Crystal Castles - Empathy ⧸⧸ Slowed + Reverb ⧸⧸ Bass Boosted.mp3
+6:playlists/youtube-music/Daylight.mp3
+7:playlists/youtube-music/Ellie Goulding - Love Me Like You Do (Lyrics) (From Tik Tok).mp3
+8:playlists/youtube-music/Fairytale.mp3
+9:playlists/youtube-music/Farben (slowed version).mp3
+10:playlists/youtube-music/FUNK UNIVERSO (Instrumental - Sped Up).mp3
+11:playlists/youtube-music/I Wanna Be Yours.mp3
+12:playlists/youtube-music/IF I HAD YOU... (Sped Up).mp3
+13:playlists/youtube-music/Interlinked.mp3
+14:playlists/youtube-music/L'Étoile D'afrique - #18 - Slow Version.mp3
+15:playlists/youtube-music/la mamá de la mamá - el alfa (1 hour best part loop + slowed reverb) ｜ tiktok version.mp3
+16:playlists/youtube-music/lady gaga - government hooker (D00nik remix) slowed♡.mp3
+17:playlists/youtube-music/Lilith.mp3
+18:playlists/youtube-music/Lonely Lies, GOLDKID$ - Interlinked (Official Slowed Audio).mp3
+19:playlists/youtube-music/Love Story.mp3
+20:playlists/youtube-music/mary on a cross - ghost [sped up].mp3
+21:playlists/youtube-music/MENINA DO JOB (SLOWED AND REVERB).mp3
+22:playlists/youtube-music/MIDDLE OF THE NIGHT.mp3
+23:playlists/youtube-music/NEW DROP x After Hours.mp3
+24:playlists/youtube-music/Nothing's New.mp3
+25:playlists/youtube-music/once upon a december — 𝒔𝒑𝒆𝒅 𝒖𝒑 + 𝒓𝒆𝒗𝒆𝒓𝒃 ✨.mp3
+26:playlists/youtube-music/Once Upon a December (From The ＂Anastasia＂ Soundtrack).mp3
+27:playlists/youtube-music/Once Upon a December.mp3
+28:playlists/youtube-music/Red Sex.mp3
+29:playlists/youtube-music/Ride Or Die, Pt. 2 (feat. Villano Antillano, Tokischa).mp3
+30:playlists/youtube-music/Rihanna - Woo (Best Part Harmonized+Sped up).mp3
+31:playlists/youtube-music/Salvatore.mp3
+32:playlists/youtube-music/Sayo-nara OST (sped up) - doki doki literature club!.mp3
+33:playlists/youtube-music/𝐒𝐎𝐍𝐍𝐄 —  𝐁𝐞𝐬𝐭 𝐏𝐚𝐫𝐭 (𝐒𝐔𝐏𝐄𝐑 𝐒𝐋𝐎𝐖𝐄𝐃).mp3
+34:playlists/youtube-music/Sweater Weather (Sped Up).mp3
+35:playlists/youtube-music/Unfair - The Neighbourhood ｜ edited TikTok.mp3
+playlist_end

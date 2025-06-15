@@ -1,0 +1,6 @@
+requests
+InquirerPy
+inquirer
+dotenv
+packaging
+pypresence

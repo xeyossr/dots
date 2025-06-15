@@ -1,0 +1,6 @@
+dotenv
+argparse
+os
+re
+requests
+inquirerpy

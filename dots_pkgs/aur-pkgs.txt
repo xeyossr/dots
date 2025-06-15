@@ -21,6 +21,7 @@ hyprpanel
 localsend-bin
 manga-cli-git
 mov-cli
+mpvc
 muezzin-bin
 neofetch
 nitch
@@ -46,6 +47,7 @@ python-rlottie-python
 reiserfsprogs
 snap-pac-grub
 snapper-rollback
+soundcloud-rpc-bin
 swaylock-effects-git
 telegram-desktop-bin
 terminalwrap
@@ -55,3 +57,4 @@ tty-clock
 v4l-utils-git
 vencord-installer-cli-bin
 xwaylandvideobridge
+ytermusic-bin

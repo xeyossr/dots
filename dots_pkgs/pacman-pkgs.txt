@@ -95,6 +95,7 @@ gdb
 gdu
 gifsicle
 git
+github-cli
 github-desktop
 glances
 gnome-bluetooth-3.0
@@ -126,6 +127,7 @@ hyprshade
 hyprshot
 hyprutils
 hyprwayland-scanner
+img2pdf
 inetutils
 intel-ucode
 interception-tools
@@ -195,7 +197,9 @@ moc-pulse
 modemmanager
 mongosh
 mov-cli
+mpd
 mpv
+mpvc
 mpvqt
 mtools
 muezzin-bin
@@ -203,6 +207,8 @@ mutt
 nano
 nano-syntax-highlighting
 ncdu
+ncmpcpp
+ncspot
 neofetch
 neovim
 netctl
@@ -242,6 +248,7 @@ pavucontrol
 pcmanfm
 perf
 perl
+perl-image-exiftool
 pfetch
 php-apache
 php-sqlite
@@ -333,8 +340,11 @@ snap-pac-grub
 snapper
 snapper-rollback
 sof-firmware
+soundcloud-dl-git
+soundcloud-rpc-bin
 spectacle
 speedtest-cli
+spotify-player
 streamlink
 sudo
 swappy
@@ -424,6 +434,7 @@ xwaylandvideobridge
 yay
 yazi
 yt-dlp
+ytermusic-bin
 ytfzf
 zeit-git
 zenity

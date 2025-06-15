@@ -1,0 +1,88 @@
+from wsgiref import validate
+from InquirerPy import inquirer, prompt
+from InquirerPy.validator import ValidationError
+import os
+
+error_msg = None
+
+def clear_screen():
+    """Ekranı temizle"""
+    os.system("clear")
+
+def not_empty_validator(val):
+    if len(val.strip()) == 0:
+        raise ValidationError(message="Boş bırakılamaz.")
+    return True
+
+def set_error_message(msg: str):
+    global global_error_msg
+    global_error_msg = msg
+
+# Custom validate function
+def validation_error(choice):
+    global global_error_msg
+    if global_error_msg:
+        raise ValidationError(
+            message=global_error_msg,
+            cursor_position=len(choice) 
+        )
+    if choice not in ["Option 1", "Option 2", "Option 3"]:
+        raise ValidationError(
+            message="Geçersiz seçenek. Lütfen geçerli bir seçim yapın.",
+            cursor_position=len(choice)
+        )
+    return True
+
+def get_selection_from_list(choices: list, message: str = "Bir seçenek seçin:", Type: str = "fuzzy") -> str:
+    """
+    Kullanıcıya seçeneklerden birini seçtiren menü.
+
+    Parametreler:
+        choices (list): Seçenek listesi (örnek: ["animecix", "openanime"])
+        message (str): Ekranda gösterilecek açıklama (varsayılan: "Bir seçenek seçin:")
+
+    Döndürür:
+        str: Kullanıcının seçtiği öğe
+
+    Notlar:
+        - Seçenekler arasında yazı yazarak arama yapılabilir (fuzzy search).
+        - Yukarı/aşağı ok tuşları ile gezilebilir.
+        - Enter ile seçim yapılır, ESC ile çıkılabilir.
+    """
+    clear_screen()
+    question = [
+        {
+            "type": Type,
+            "name": "selection",
+            "message": message,
+            "choices": choices,
+            "validate": validation_error,
+            "border": True,
+            "cycle": True,
+            "max_height": "70%",
+        }
+    ]
+    result = prompt(question)
+    return result["selection"] # type: ignore
+
+
+def get_input_from_user(message: str = "Bir şey yazın:") -> str:
+    """
+    Kullanıcıdan serbest metin girişi alır.
+
+    Parametreler:
+        message (str): Kullanıcıya gösterilecek mesaj
+
+    Döndürür:
+        str: Kullanıcının yazdığı metin
+
+    Notlar:
+        - Giriş boş olamaz. Boş geçmeye çalışırsa hata mesajı gösterilir.
+        - Yazılan değer direkt string olarak döndürülür.
+    """
+    clear_screen()
+    result = inquirer.text(
+        message=message,
+        validate=not_empty_validator
+    ).execute()
+    return result

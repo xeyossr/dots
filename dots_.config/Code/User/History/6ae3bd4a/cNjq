@@ -1,0 +1,6 @@
+.venv
+.vscode
+modules/__pycache__
+anitr-cli.spec
+build
+dist
