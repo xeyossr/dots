@@ -1,0 +1,1 @@
+g++ -std=c++20 -o lastfancy lastfancy.cpp

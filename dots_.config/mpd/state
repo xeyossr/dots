@@ -1,9 +1,10 @@
-sw_volume: 88
+sw_volume: 100
 audio_device_state:1:My HTTP Stream
 audio_device_state:1:My Pulse Output
 audio_device_state:1:toggle_visualizer
-state: stop
-current: 4
+state: play
+current: 27
+time: 12.973
 random: 0
 repeat: 0
 single: 1
@@ -40,8 +41,8 @@ playlist_begin
 24:playlists/youtube-music/Nothing's New.mp3
 25:playlists/youtube-music/once upon a december — 𝒔𝒑𝒆𝒅 𝒖𝒑 + 𝒓𝒆𝒗𝒆𝒓𝒃 ✨.mp3
 26:playlists/youtube-music/Once Upon a December (From The ＂Anastasia＂ Soundtrack).mp3
-27:playlists/youtube-music/Once Upon a December.mp3
-28:playlists/youtube-music/Red Sex.mp3
+27:playlists/youtube-music/Red Sex.mp3
+28:playlists/youtube-music/Once Upon a December.mp3
 29:playlists/youtube-music/Ride Or Die, Pt. 2 (feat. Villano Antillano, Tokischa).mp3
 30:playlists/youtube-music/Rihanna - Woo (Best Part Harmonized+Sped up).mp3
 31:playlists/youtube-music/Salvatore.mp3

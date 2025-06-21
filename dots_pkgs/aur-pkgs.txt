@@ -1,7 +1,6 @@
 2048-cli-git
 activate-linux-git
 anifetch
-animefetch
 anitr-cli
 appimagetool-bin
 apple_cursor
@@ -14,10 +13,11 @@ cliwrap-git
 currencyconverter
 discli
 discordo-git
-endeavouros-keyring
+durdraw
 ftxui
 hyde-cli-git
 hyprpanel
+lastf
 localsend-bin
 manga-cli-git
 mov-cli
@@ -39,7 +39,6 @@ python-devgoldyutils
 python-hyprpy
 python-inquirer
 python-kitchen
-python-kitty
 python-mov-cli-test
 python-pyamdgpuinfo
 python-pytubefix

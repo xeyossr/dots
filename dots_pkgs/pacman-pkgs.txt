@@ -6,7 +6,6 @@ alsa-plugins
 alsa-utils
 ani-cli
 anifetch
-animefetch
 anitr-cli
 apache
 appimagetool-bin
@@ -18,6 +17,7 @@ ascii-image-converter
 asciinema
 asciiquarium
 aspell
+aspell-en
 avizo
 b43-fwcutter
 banner
@@ -37,11 +37,13 @@ btrfs-progs
 cantarell-fonts
 cava
 cbonsai
+ccache
 chafa
 chaotic-keyring
 chaotic-mirrorlist
 checkupdates-with-aur
 chess-tui
+chrpath
 citch
 cli11
 cliphist
@@ -71,11 +73,11 @@ downgrade
 dracut
 duf
 dunst
+durdraw
 e2fsprogs
 edk2-ovmf
 efibootmgr
 efitools
-endeavouros-keyring
 ethtool
 exfatprogs
 eza
@@ -155,6 +157,7 @@ ktimer
 kvantum
 kvantum-qt5
 kwayland-integration
+lastf
 less
 lib32-nvidia-utils
 lib32-vulkan-icd-loader
@@ -244,6 +247,7 @@ pacman-contrib
 pamixer
 pandoc-cli
 papirus-icon-theme
+patchelf
 pavucontrol
 pcmanfm
 perf
@@ -292,7 +296,6 @@ python-defusedxml
 python-evdev
 python-hyprpy
 python-kitchen
-python-kitty
 python-loguru
 python-openai
 python-packaging
@@ -321,7 +324,6 @@ qt6ct
 qtcreator
 rebuild-detector
 reflector
-reflector-simple
 reiserfsprogs
 rofi-calc
 rofi-wayland
@@ -330,6 +332,7 @@ rtkit
 rust
 s-nail
 satty
+scdoc
 sddm-kcm
 sg3_utils
 sl
@@ -371,6 +374,8 @@ tldr
 tmux
 tofi
 toipe
+tor
+torbrowser-launcher
 trackma-git
 tree
 ts-node

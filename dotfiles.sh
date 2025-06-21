@@ -126,8 +126,8 @@ backup_dotfiles() {
 
     echo "📂 Copying from ~/.config..."
     for path in \
-        fastfetch mpd ncmpcpp swayosd fish vim gtk-3.0 hypr hyde kitty Kvantum lsd menus nwg-look \
-        qt5ct qt6ct rofi starship anitr-cli swaylock systemd/user tmux waybar wlogout xsettingsd \
+        fastfetch mpd ncmpcpp swayosd fish nvim vim gtk-3.0 hypr hyde kitty Kvantum lsd menus nwg-look \
+        qt5ct qt6ct rofi micro starship anitr-cli swaylock systemd/user tmux waybar wlogout xsettingsd \
         mpv Code/User; do
         copy_with_path "$HOME/.config/$path" "$CONFIG_DIR"
     done

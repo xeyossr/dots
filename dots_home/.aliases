@@ -42,3 +42,8 @@ alias meminfo='free -h'
 alias diskinfo='df -h'
 alias dfspace='df -h'
 alias duinfo='du -sh *'
+
+alias nvim='bash ~/.config/nvim/kitty.sh'
+alias vim='bash ~/.config/vim/kitty.sh'
+alias tmux='bash ~/.config/tmux/kitty.sh'
+alias micro='bash ~/.config/micro/kitty.sh'

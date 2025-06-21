@@ -2,7 +2,7 @@
 Description=Run smartctl logger every hour
 
 [Timer]
-OnCalendar=hourly
+OnCalendar=*-*-* 03:00:00
 Persistent=true
 
 [Install]
